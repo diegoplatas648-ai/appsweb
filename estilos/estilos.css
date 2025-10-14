@@ -1,0 +1,286 @@
+header{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        background-color: rgb(255, 255, 255);
+        padding: 0px;
+        width: 100%;
+        margin-left: -7px;
+        position: fixed;
+        top: -0px;
+        z-index: 10;
+    }
+    .img2{
+        width: 400px;
+        height: 300px;
+        border-radius: 10px;
+        margin-left: -350px;
+    }
+    nav ul li:hover ul {
+        display: block;
+    }
+    .damp{
+        border-bottom: 1px solid #d5dbdb;
+        background-color: #d5dbdb;
+    }
+    .Corte3{
+        text-align: center;
+    }
+    aside{
+        margin-left: 50px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        color: #111;
+        width: 300px;
+        border-right: 1px solid #d5dbdb;
+        border-left: 1px solid #d5dbdb;
+        position: absolute;
+    }
+    .img3{
+        width: 400px;
+        height: 300px;
+        border-radius: 10px;
+        margin-left: -350px;
+    }
+    .Corte2{
+        text-align: center;
+    }
+    .C4{
+        background: #808080;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin: 100px 507px;
+        width: 1000px;
+        border-radius: 10px;
+    }
+    .C2{
+        background: #808080;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin: 100px 507px;
+        width: 1000px;
+        border-radius: 10px;
+    }
+    nav ul li{
+        position: relative;
+    }
+    .C1{
+        background: #808080;
+        width: 1000px;
+        padding: 3px;
+        text-align: center;
+        margin-left: 507px;
+        border-radius: 10px;
+        margin-top: 100px;
+    }
+    .img1{
+        width: 400px;
+        height: 300px;
+        border-radius: 10px;
+        margin-left: -550px;
+    }
+    .materias{
+        border-bottom: 1px solid #d5dbdb;
+        border-top: 1px solid #d5dbdb;
+        height: 23px;
+        background-color: #d5dbdb;
+    }
+    .Corte4{
+        text-align: center;
+    }
+    nav ul{
+        display: flex;
+        gap: 30px;
+        list-style: none;
+    }
+    figure{
+        margin-left: 650px;
+        border-top: 1px solid #d5dbdb;
+        width: 300px;
+    }
+    .apwb{
+        border-bottom: 1px solid #d5dbdb;
+        background-color: #d5dbdb;
+    }
+    body{
+        margin-top: 52px;
+    }
+    .cvv{
+        border-bottom: 1px solid #d5dbdb;
+        background-color: #d5dbdb;
+    }
+    .C3{
+        background: #808080;
+        width: 1000px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin: 0px 507px;
+        border-radius: 10px;
+    }
+    h1{
+        text-align: center;
+    }
+    .etd{
+        border-bottom: 1px solid #d5dbdb;
+        background-color: #d5dbdb;
+    }
+    nav ul li a{
+        display: block;
+        transition: background 0.25s ease;
+        color: blue;
+        text-decoration: none;
+        font-size: large;
+    }
+    .temas{
+        font-size: 20px;
+        font-weight: bold;
+        position: absolute;
+        left: 10px;
+    }
+    .Corte1{
+        text-align: center;
+    }
+    p{
+        font-size: large;
+        text-align: center;
+    }
+    .ayds{
+        background-color: #d5dbdb;
+        border-bottom: 1px solid #d5dbdb;
+    }
+    main{
+        margin-top: 40px;
+    }
+    .cuartocuatri{
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        right: 35px;
+    }
+    section{
+        padding-top: 10px;
+        padding-bottom: 5px;
+        background-color: rgb(11, 60, 150);
+        margin-left: -7px;
+        width: 100%;
+        text-align: center;
+    }
+    .ing4{
+        background-color: #d5dbdb;
+    }
+    .video{
+        margin-top: 100px;
+        text-align: center;
+    }
+    footer{
+    background:#222; 
+    color:#fff; 
+    text-align:center; 
+    padding:20px; 
+    margin-top:40px;
+    }
+
+    /*Diseño responsivo*/
+
+    /* Televisión y pantallas grandes */
+    @media (min-width: 1400px) {
+        body {
+            font-size: 1.3em;
+        }
+        .C1, .C2, .C3, .C4, aside, section {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    /* Laptop y escritorio */
+    @media (max-width: 1100px) {
+        .C1, .C2, .C3, .C4 {
+            width: 95%;
+            margin: 40px auto;
+            padding: 10px;
+        }
+        aside {
+            position: static;
+            width: 95%;
+            margin: 20px auto;
+            border-left: none;
+            border-right: none;
+        }
+        figure {
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+        }
+        .img1, .img2, .img3 {
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+        }
+        section {
+            margin-left: 0;
+            width: 100%;
+            padding: 10px;
+        }
+        header {
+            flex-direction: column;
+            margin-left: 0;
+            padding: 10px;
+            position: static;
+        }
+        nav ul {
+            flex-direction: column;
+            gap: 10px;
+            padding: 0;
+        }
+        main {
+            margin-top: 10px;
+        }
+        .video {
+            margin-top: 30px;
+        }
+    }
+
+    /* Teléfono y dispositivos pequeños */
+    @media (max-width: 600px) {
+        h1, h2, .cuartocuatri {
+            font-size: 1em;
+        }
+        .C1, .C2, .C3, .C4, aside, section {
+            width: 100%;
+            margin: 10px 0;
+            padding: 5px;
+        }
+        figure {
+            width: 100%;
+            margin-left: 0;
+        }
+        .img1, .img2, .img3 {
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+        }
+        nav ul {
+            flex-direction: column;
+            gap: 5px;
+            padding: 0;
+        }
+        footer {
+            padding: 10px;
+            font-size: 0.9em;
+        }
+        header {
+            flex-direction: column;
+            padding: 5px;
+            position: static;
+        }
+        aside {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+        .video {
+            margin-top: 10px;
+        }
+    }
