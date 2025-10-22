@@ -1,3 +1,5 @@
+/* Este CSS debe ser el contenido de tu archivo estilos.css */
+
 body {
     margin-top: 0;
     font-family: sans-serif;
@@ -129,6 +131,7 @@ footer {
     margin-top: 40px;
 }
 
+/* Por defecto, el botón flotante está oculto */
 .menu-flotante {
     display: none;
     border: none;
@@ -144,10 +147,11 @@ footer {
         position: static;
     }
 
+    /* Regla crítica para hacer visible el botón en móvil */
     .menu-flotante {
-        display: block;
-        position: fixed;
-        left: 16px; 
+        display: block; 
+        position: fixed; 
+        right: 20px; /* Cambiado a 'right' para que esté en la derecha */
         top: 20px;
         left: auto; 
         width: 56px;
