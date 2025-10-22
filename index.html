@@ -16,7 +16,7 @@
             </ul>
         </nav>
 
-        <!-- botón móvil: recuadro flotante -->
+        
         <button class="menu-flotante" aria-expanded="false" aria-controls="main-nav" title="Menú">☰</button>
     </header>
     <main>
@@ -35,7 +35,7 @@
             <div class="ing4">Ingles 4</div>
         </aside>
         <article>
-            <div class="C1">
+            <div class="C1" id="uni1">
                 <h2 class="Corte1">Unidad 1</h2>
                 <p>Conceptos básicos de ética y moral
                     Valores personales y profesionales
@@ -48,7 +48,7 @@
             </div>
         </article>
         <article>
-            <div class="C2">
+            <div class="C2" id="uni2">
                 <h2 class="Corte2">Unidad 2</h2>
                 <p>Código de ética profesional
                     Responsabilidad social y profesional
@@ -61,7 +61,7 @@
             </div>
         </article>
         <article>
-            <div class="C3">
+            <div class="C3 " id="uni3">
                 <h2 class="Corte3">Unidad 3</h2>
                 <p>Comunicación profesional y asertiva
                     Respeto y tolerancia en el entorno laboral
@@ -75,7 +75,7 @@
         </article>
 
                 <article>
-                    <div class="C4">
+                    <div class="C4 " id="uni4">
                     <h2 class="Corte4">Unidad 4</h2>
                     <p>Impacto ético de la tecnología en la sociedad
                         Privacidad y protección de datos
@@ -91,19 +91,46 @@
     </footer>
 
     <script>
-    // script mínimo para abrir/cerrar el menú en móvil
     (function(){
       const btn = document.querySelector('.menu-flotante');
       const nav = document.getElementById('main-nav');
       if(!btn || !nav) return;
-      btn.addEventListener('click', () => {
-        const opened = nav.classList.toggle('open');
-        btn.setAttribute('aria-expanded', opened);
+
+      function openMenu(open){
+        if(open){
+          nav.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+          document.body.classList.add('menu-open');
+        } else {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          document.body.classList.remove('menu-open');
+        }
+      }
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        
+        if (window.innerWidth > 600) return;
+        const willOpen = !nav.classList.contains('open');
+        openMenu(willOpen);
       });
+
+      
+      document.addEventListener('click', (e) => {
+        if (!nav.classList.contains('open')) return;
+        if (nav.contains(e.target) || btn.contains(e.target)) return;
+        openMenu(false);
+      });
+
+      
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') openMenu(false);
+      });
+
       window.addEventListener('resize', () => {
         if (window.innerWidth > 600) {
-          nav.classList.remove('open');
-          btn.setAttribute('aria-expanded', false);
+          openMenu(false);
         }
       });
     })();
