@@ -7,7 +7,7 @@
     <body>
     <header>
                 <div class="cuartocuatri">Cuarto Cuatrimestre</div>
-        <nav>
+        <nav id="main-nav">
             <ul>
             <li><a href="#uni1">Corte1</a></li>
             <li><a href="#uni2">Corte2</a></li>
@@ -15,6 +15,9 @@
             <li><a href="#uni4">Corte4</a></li>
             </ul>
         </nav>
+
+        <!-- botón móvil: recuadro flotante -->
+        <button class="menu-flotante" aria-expanded="false" aria-controls="main-nav" title="Menú">☰</button>
     </header>
     <main>
         <section>
@@ -86,5 +89,24 @@
     <footer>
         <p> 2025 Etica Profesional | Sitio web semántico. </p>
     </footer>
-    </body>
+
+    <script>
+    // script mínimo para abrir/cerrar el menú en móvil
+    (function(){
+      const btn = document.querySelector('.menu-flotante');
+      const nav = document.getElementById('main-nav');
+      if(!btn || !nav) return;
+      btn.addEventListener('click', () => {
+        const opened = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', opened);
+      });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 600) {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', false);
+        }
+      });
+    })();
+    </script>
+</body>
 </html>
